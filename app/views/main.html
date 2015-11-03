@@ -1,16 +1,34 @@
-<div class="container" ng-controller="stcheckerCtrl">
+<div ng-controller="stcheckerCtrl">
     <div class="jumbotron">
         <div class="container">
             <img class="logo-main" src="images/st-turns-2.png" alt="Standing Theory Turns 2">
         </div>
     </div>
-    <div class="container main">
-      <div class="row">
+    <div class="instructions">
+      <row>
+        <ol>
+          <li>
+            <p>Go to the <a href="http://jelled.com/instagram/lookup-user-id">Instagram ID Lookup App</a></p>
+          </li>
+          <li>
+            <p>In the Lookup App, type in the user's Instagram username. e.g. standingtheorycafe</p>
+          </li>
+          <li>
+            <p>Copy the ID number that is generated. Come back to this page and paste it below.</p>
+          </li>
+          <li>
+            <p>Remember to <strong>REFRESH</strong> the page before checking the next user.</p>
+          </li>
+        </ol>
+      </row>
+    </div>
+    <div class="main clearfix">
+      <div class="col-sm-12">
         <p class="lead">
           Insert Instagram User ID below:
         </p>
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="..." ng-model="userid" val="{{userid}}" ng-value="{{userid}}" id="user_id" name="userid">
+          <input type="text" class="form-control" aria-label="..." ng-model="userid" val="{{userid}}" ng-value="{{userid}}" id="user_id" name="userid" placeholder="Paste Instagram User ID here">
           <div class="input-group-btn">
             <button type="button" class="btn btn-success" ng-click="getMore()">Check</button>
           </div>

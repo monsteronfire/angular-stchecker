@@ -15,6 +15,7 @@ $pomegranate: #E75113;
 
 body {
   padding: 0;
+  background-image: url('../images/bg-tile.png');
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -39,13 +40,21 @@ body {
 }
 
 .logo-main {
-  width: 100%;
+  width: 50%;
 }
 
 /* Custom main page content */
-.container.main {
-  text-align: center;
+.main {
+  margin-top: 20px;
   margin-bottom: 20px;
+  padding: 40px 20px 40px 20px;
+  background-color: $pomegranate;
+  border-radius: 6px;
+}
+
+.main .lead {
+  color: white;
+  text-align: center;
 }
 
 .follower-wrapper {
