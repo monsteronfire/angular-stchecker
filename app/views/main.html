@@ -1,4 +1,4 @@
-<div class="container" ng-controller="Example">
+<div class="container" ng-controller="stcheckerCtrl">
     <div class="jumbotron">
         <div class="container">
             <img class="logo-main" src="images/st-turns-2.png" alt="Standing Theory Turns 2">
@@ -10,18 +10,21 @@
           Insert Instagram User ID below:
         </p>
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="..." ng-model="userid">
+          <input type="text" class="form-control" aria-label="..."  val="{{userid}}" ng-value="{{userid}}" id="userid" name="userid">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-success">Check</button>
+            <button type="button" class="btn btn-success" ng-click="getMore()">Check</button>
           </div>
         </div>
       </div>
     </div>
+    <p>{{userid}}</p>
 
     <div class="row follower-wrapper">
       <div ng-repeat="f in followers" class="col-sm-6 col-md-4">
         <div class="thumbnail" ng-if="f.username === 'standingtheorycafe'">  
-          <img ng-src="{{f.profile_picture}}" class="img-responsive" title="{{f.username}}"> 
+          <a href="{{f.link}}">
+            <img ng-src="{{f.profile_picture}}" class="img-responsive" title="{{f.username}}">
+          </a> 
           <div class="caption">
             <h5>{{f.full_name}}</h5>
           </div>
