@@ -44,8 +44,14 @@ body {
 /* Custom main page content */
 .container.main {
   text-align: center;
+  margin-bottom: 20px;
 }
 
+.follower-wrapper {
+  .thumbnail .caption {
+    text-align: center;
+  }
+}
 
 /* Custom page footer */
 .footer {
