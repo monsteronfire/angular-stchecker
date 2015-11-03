@@ -18,7 +18,6 @@ angular.module("stcheckerApp")
 
                     $http.jsonp(endPoint).success(function(response) {
                         callback(response.data);
-                        console.log(response.data);
                     });
                 }
             }
@@ -34,6 +33,7 @@ angular.module("stcheckerApp")
               if (typeof $scope.have[data[i].id]==="undefined") {
                 $scope.followers.push(data[i]) ;
                 $scope.have[data[i].id] = "1";
+                console.log($scope.followers[i].username);
               }
             }
         });

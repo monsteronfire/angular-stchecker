@@ -20,7 +20,28 @@
 
     <div class="row follower-wrapper">
       <div ng-repeat="f in followers" class="col-sm-6 col-md-4">
-        <div class="thumbnail" ng-if="f.username = 'standingtheorycafe'">  
+        <div class="thumbnail" ng-if="f.username === 'standingtheorycafe'">  
+          <img ng-src="{{f.profile_picture}}" class="img-responsive" title="{{f.username}}"> 
+          <div class="caption">
+            <h5>{{f.full_name}}</h5>
+          </div>
+        </div>
+
+        <div class="thumbnail" ng-if="f.username === 'wowmombox'">  
+          <img ng-src="{{f.profile_picture}}" class="img-responsive" title="{{f.username}}"> 
+          <div class="caption">
+            <h5>{{f.full_name}}</h5>
+          </div>
+        </div>
+
+        <div class="thumbnail" ng-if="f.username === 'threelittlebirdscoffee'">  
+          <img ng-src="{{f.profile_picture}}" class="img-responsive" title="{{f.username}}"> 
+          <div class="caption">
+            <h5>{{f.full_name}}</h5>
+          </div>
+        </div>
+
+        <div class="thumbnail" ng-if="f.username === 'littleteecakes'">  
           <img ng-src="{{f.profile_picture}}" class="img-responsive" title="{{f.username}}"> 
           <div class="caption">
             <h5>{{f.full_name}}</h5>
