@@ -20,9 +20,9 @@ angular.module("stcheckerApp")
 
             $http.jsonp(endPoint).success(function(response) {
                 callback(response.data);
-                console.log(response.data);
+                // console.log(response.data);
             });
-            console.log(userid);
+            // console.log(userid);
             return userid;
           }
         }
