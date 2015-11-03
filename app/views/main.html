@@ -1,19 +1,25 @@
-<div class="jumbotron">
-  <img class="logo-main" src="images/st-turns-2.png" alt="Standing Theory Turns 2"><br>
-</div>
-
-<div class="container main">
-  <p class="lead">
-    Insert Instagram handle below:
-  </p>
-  <div class="input-group">
-    <input type="text" class="form-control" aria-label="...">
-    <div class="input-group-btn">
-      <button type="button" class="btn btn-success">Check</button>
+<div class="container" ng-controller="Example">
+    <div class="jumbotron">
+        <div class="container">
+            <img class="logo-main" src="images/st-turns-2.png" alt="Standing Theory Turns 2">
+        </div>
     </div>
-  </div>
-</div>
-
-<div class="row marketing">
- 
+    <div class="container main">
+      <div class="row">
+        <p class="lead">
+          Insert Instagram handle below:
+        </p>
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="...">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-success">Check</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div ng-repeat="p in pics | orderBy:orderBy" class="col-md-2">
+          <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" class="img-responsive thumbnail" title="{{p.caption.text}}"></a>
+          <span class="glyphicon glyphicon-heart"> {{p.likes.count}}</span>      
+        </div>
+    </div>
 </div>
